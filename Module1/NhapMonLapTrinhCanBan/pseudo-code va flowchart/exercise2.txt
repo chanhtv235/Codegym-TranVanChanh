@@ -1,0 +1,10 @@
+    
+Begin
+  N  // Random Number is chosed by computer(N= from 0 to 9)
+  
+Input M
+  IF (N==M)
+    Display "You guessed TRUE"         
+  ELSE             
+    Display "You guessed wRONG" 
+End

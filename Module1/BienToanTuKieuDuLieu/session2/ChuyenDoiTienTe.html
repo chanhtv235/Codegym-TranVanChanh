@@ -21,7 +21,7 @@
         <option value="USD"> USD</option>
     </select>
 
-    <input type="button" value="đỏi tiền" onclick="doi_tien()">
+    <input type="button" value="Convert" onclick="doi_tien()">
 </form>
 <p id="hien_thi"></p>
 
@@ -37,7 +37,7 @@
             else if (tien_goc=="VND"&& tien_doi=="USD")
                 ket_qua = nhap_tien / 23000;
             else
-                ket_qua="bạn hãy chọn lại đơn vị chuyển đổi"
+                ket_qua="--Bạn chọn lại đơn vị cần đổi"
         //document.getElementById("hien_thi").innerHTML = tien_goc;
         document.getElementById("hien_thi").innerHTML ="Kết quả: "+ ket_qua;
     }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ưng dụng máy tính</title>
+</head>
+<body>
+
+<form>
+    <input type="text" id="number1">
+    <input type=" text" id="number2"> <br/><br/>
+    <input type="button" value="Addtion(+)" onclick="addtion()">
+    <input type="button" value="Subtraction(-)" onclick="subtraction()">
+    <input type="button" value="Multiplication(*)" onclick="multiplication()">
+    <button onclick="division()">chia</button>
+<form/>
+    <p id="hien_thi"></p>
+
+    <script>
+
+        function addtion() {
+            let fistNumber = document.getElementById("number1").value;
+            let secondNumber = document.getElementById("number2").value;
+            fistNumber = parseInt(fistNumber);
+            secondNumber = parseInt(secondNumber);
+            let result = fistNumber + secondNumber;
+            document.getElementById("hien_thi").innerHTML = result;
+
+        }
+
+        function subtraction() {
+            let fistNumber = document.getElementById("number1").value;
+            let secondNumber = document.getElementById("number2").value;
+            fistNumber = parseInt(fistNumber);
+            secondNumber = parseInt(secondNumber);
+            let result = fistNumber - secondNumber;
+            document.getElementById("hien_thi").innerHTML = result;
+        }
+
+        function multiplication() {
+            let fistNumber = document.getElementById("number1").value;
+            let secondNumber = document.getElementById("number2").value;
+            fistNumber = parseInt(fistNumber);
+            secondNumber = parseInt(secondNumber);
+            let result = fistNumber * secondNumber;
+            document.getElementById("hien_thi").innerHTML = result;
+        }
+
+        function division() {
+            let fistNumber = document.getElementById("number1").value;
+            let secondNumber = document.getElementById("number2").value;
+            fistNumber = parseInt(fistNumber);
+            secondNumber = parseInt(secondNumber);
+            let result = fistNumber / secondNumber;
+            document.getElementById("hien_thi").innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>

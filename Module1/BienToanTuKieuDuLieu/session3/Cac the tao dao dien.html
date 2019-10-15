@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Ưng dụng máy tính</title>
+</head>
+<body>
+<script>
+    let day = "Mon";
+    let message = "";
+
+    switch (day) {
+        case "Mon":
+            message = "Ngày đầu tuần";
+
+        case "Wed":
+            message = "Ngày giữa tuần";
+
+        case "Sat":
+        case "Sun":
+            message = "Ngày nghỉ";
+    }
+    alert(message)
+</script>
+</body>
+<form action="/action_page.php">
+    Account:
+    <input name="account" type="text"/>
+</form>
+
+/////////////////////////////////////////////////////
+
+</br>
+<form action="/action_page.php">
+    Password:
+    <input name="password" type="password"/>
+</form>
+
+</html>
+
+///////////////////////////////////////////////////
+<form action="/action_page.php">
+    Sở thích:<br/>
+    <label><input name="hobby" value="travel" type="checkbox"/> Du lịch</label> <br/>
+    <label><input name="hobby" value="sport" type="checkbox"/> Thể thao</label> <br/>
+    <label><input name="hobby" value="cooking" type="checkbox"/> Nấu ăn</label> <br/>
+</form>
+
+///////////////////////////////////////////////////////////
+<form action="/action_page.php">
+    Sở thích:<br/>
+    <label><input name="hobby" value="travel" type="radio" checked/> Du lịch</label> <br/>
+    <label><input name="hobby" value="sport" type="radio"/> Thể thao</label> <br/>
+    <label><input name="hobby" value="cooking" type="radio"/> Nấu ăn</label> <br/>
+</form>
+/////////////////////////////////////////////////////////
+<form action="/action_page.php">
+    Account: <input name="account" value="admin" type="text"/><br/>
+    Sở thích:<br/>
+    <label><input name="hobby" value="travel" type="radio" checked/> Du lịch</label> <br/>
+    <label><input name="hobby" value="sport" type="radio"/> Thể thao</label> <br/>
+    <label><input name="hobby" value="cooking" type="radio"/> Nấu ăn</label> <br/>
+    <input type="reset" value="Reset"/>
+</form>
+
+//Input Hidden-/Dùng để chứa giá trị của form nhưng không hiển thị trên giao diện người dùng.<br/> Dữ liệu này cũng được đẩy lên server như bình thường
+<form method="POST">
+    Account: <input name="account" value="admin" type="text"/><br/>
+    Sở thích:<br/>
+    <label><input name="hobby" value="travel" type="radio" checked/> Du lịch</label> <br/>
+    <label><input name="hobby" value="sport" type="radio"/> Thể thao</label> <br/>
+    <label><input name="hobby" value="cooking" type="radio"/> Nấu ăn</label> <br/>
+    <input type="submit" value="Send data"/>
+</form>
+Thẻ button
+Thẻ button được sử dụng để hiển thị một nút.
+Bên trong thẻ button thì chúng ta có thể đưa các nội dung khác vào, chẳng hạn như là chuỗi hoặc hình ảnh.
+Đây cũng chính là sự khác biệt so với việc sử dụng thẻ input button, bởi vì bên trong input button thì chỉ có thể chứa text.
+<form method="POST">
+    <button type="button">
+        <img src="http://codegym.vn/wp-content/uploads/2017/03/CodeGym-3-02-copy.jpg" width="200px"/>
+    </button>
+</form>
+Thẻ textarea
+Thẻ textarea được sử dụng để hiển thị trường nhập chuỗi dài (nhiều dòng).
+<form method="POST">
+    <textarea cols="50" rows="4">This is a very very long text text text text text text text text text text text text </textarea>
+</form>

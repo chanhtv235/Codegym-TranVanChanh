@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+    <form>
+        <fieldset >
+            <input type="text" id="windown" name="windown"value=""><br/><br/>
+            <input type="button" value="1" onclick="number1()">
+            <input type="button" value="2" onclick="number2()">
+            <input type="button" value="3" onclick="number3()">
+            <input type="button" value="+" onclick="add()"><br/><br/>
+            <input type="button" value="4" onclick="number4()">
+            <input type="button" value="5" onclick="number5()">
+            <input type="button" value="6" onclick="number6()">
+            <input type="button" value="-" onclick="sub()"><br/><br/>
+            <input type="button" value="7" onclick="number7()">
+            <input type="button" value="8" onclick="number8()">
+            <input type="button" value="9" onclick="number9()">
+            <input type="button" value="X" onclick="mul()"><br/><br/>
+            <input type="button" value="C" onclick="clr()">
+            <input type="button" value="0" onclick="number0()">
+            <input type="button" value="=" onclick="equ()">
+            <input type="button" value="/" onclick="div()"><br/><br/>
+        </fieldset>
+    </form>
+    <script>
+
+        function number1() {
+            document.getElementById("windown").value =document.getElementById("windown").value+1;
+        }
+        function number2() {
+            document.getElementById("windown").value =document.getElementById("windown").value+2;
+        }
+
+        function number3() {
+            document.getElementById("windown").value =document.getElementById("windown").value+3;
+        }
+        function number4() {
+            document.getElementById("windown").value =document.getElementById("windown").value+4;
+
+        }
+        function number5() {
+            document.getElementById("windown").value =document.getElementById("windown").value+5;
+
+        }
+        function number6() {
+            document.getElementById("windown").value =document.getElementById("windown").value+6;
+
+        }
+        function number7() {
+            document.getElementById("windown").value =document.getElementById("windown").value+7;
+
+        }
+        function number8() {
+            document.getElementById("windown").value =document.getElementById("windown").value+8;
+
+        }
+        function number9() {
+            document.getElementById("windown").value =document.getElementById("windown").value+9;
+
+        }
+        function number0() {
+            document.getElementById("windown").value =document.getElementById("windown").value+0;
+
+        }
+        function clr() {
+            document.getElementById("windown").value ="";
+        }
+        function add() {
+            document.getElementById("windown").value =document.getElementById("windown").value+"+";
+        }
+        function div() {
+            document.getElementById("windown").value =document.getElementById("windown").value+"/";
+        }
+        function sub() {
+            document.getElementById("windown").value =document.getElementById("windown").value+"-";
+        }
+        function mul() {
+            document.getElementById("windown").value =document.getElementById("windown").value+"x";
+        }
+
+        function equ() {
+
+            let string = document.getElementById("windown").value;
+            // kiểm tra phép tính nào được nhập
+            let indexAdd= string.indexOf("+");
+            let indexSub= string.indexOf("-");
+            let indexMul= string.indexOf("x");
+            let indexDiv= string.indexOf("/");
+            let height= string.length;                               // Tính độ dài của chuỗi
+            let result;
+            if(indexAdd !=-1){
+                let firstNumber=string.substr(0,indexAdd);         // lấy số thứ nhất
+                let secondNumber=string.substr(indexAdd+1,height);  // lấy số thứ hai
+                firstNumber=parseInt(firstNumber);
+                secondNumber=parseInt(secondNumber);
+                result=firstNumber + secondNumber;
+            }else if (indexSub !=-1){
+                let firstNumber=string.substr(0,indexSub);
+                let secondNumber=string.substr(indexSub+1,height);
+                firstNumber=parseInt(firstNumber);
+                secondNumber=parseInt(secondNumber);
+                result=firstNumber - secondNumber;
+            } else if (indexMul !=-1) {
+                let firstNumber=string.substr(0,indexMul);
+                let secondNumber=string.substr(indexMul+1,height);
+                firstNumber=parseInt(firstNumber);
+                secondNumber=parseInt(secondNumber);
+                result=firstNumber * secondNumber;
+            }else if(indexDiv !=-1) {
+                let firstNumber=string.substr(0,indexDiv);
+                let secondNumber=string.substr(indexDiv+1,height);
+                firstNumber=parseInt(firstNumber);
+                secondNumber=parseInt(secondNumber);
+                result=firstNumber / secondNumber;
+             }else {
+                result="Nhập lại phép tính";
+            }
+
+           document.getElementById("windown").value =result;
+         }
+
+    </script>
+</body>
+</html>

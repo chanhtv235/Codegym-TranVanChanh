@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In bang Cuu Chuong</title>
+</head>
+<body>
+    <h2><b>BẢNG CỬU CHƯƠNG</b> </h2>
+    <script>
+        let cuuChuong="<table border='1' cellspacing='0' cellpadding='0' width='1000'>"
+        let i=2;
+        let j=1;
+        let result='';
+        let string='';
+        for(j=1;j<=10;j++){
+            cuuChuong += "<tr>";
+            for(i=2;i<=9;i++){
+                result=i*j;
+                string= i+"x"+j;
+                cuuChuong +="<td>"+ string+ "="+result+ "<td/>";
+            }
+            cuuChuong += "<tr/>";
+        }
+        document.write(cuuChuong);
+    </script>
+</body>
+</html>

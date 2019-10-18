@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra số lượng số nguyên tố</title>
+</head>
+<body>
+        <script>
+            let numbers = parseInt(prompt("nhập vào số lượng số nguyên tố cần in ra"));
+            let count=0;
+            let N=2;
+            let daySoNguyenTo="";
+            while (count<numbers) {
+                let j=0;
+                for(let i=2;i<N;i++){
+                    if(N%i==0)
+                        j++;
+                }
+                if (j==0) {
+                    //alert(N+" là số nguyên tố");
+                    daySoNguyenTo += N + ", ";
+                    count++;
+                }
+                N++;
+            }
+            document.write("<i> Dãy số nguyên tố cần tìm là :</i>"+ daySoNguyenTo);
+
+
+
+
+        </script>
+</body>
+</html>

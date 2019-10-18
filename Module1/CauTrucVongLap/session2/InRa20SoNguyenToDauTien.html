@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra số lượng số nguyên tố</title>
+</head>
+<body>
+        <script>
+            let numbers = parseInt(prompt("Nhập vào số lượng số nguyên tố cần in ra"));
+            let count=0;
+            let N=2;
+            let daySoNguyenTo="";
+            while (count<numbers) {
+                if(KiemTraSoNguyenTo(N)==true){
+                    daySoNguyenTo +=  N +", ";
+                    count++;
+                }
+                N++;
+            }
+            document.write("<i> Dãy số nguyên tố cần tìm là :</i>"+ daySoNguyenTo);
+
+            /////// Hàm kiểm tra số nguyên tố/////////////////////////////////////////////////
+            //Số nguyên tố là số chỉ chia hết cho 1 và chính nó///////////////////////////////
+            function KiemTraSoNguyenTo(n){
+                let j=0;
+                for(let i=2;i<n;i++){
+                    if(n%i==0)
+                        j++;
+                }
+
+                if (j==0) {
+                   // "là số nguyên tố");
+                    return true;
+                }
+            }
+
+        </script>
+</body>
+</html>

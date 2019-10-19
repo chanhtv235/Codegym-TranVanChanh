@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra dãy số Fibonacci</title>
+</head>
+<body>
+    <script>
+        let x1 =0;
+        let x2= 1;
+        let fibonacciString= x1+", "+x2+", ";
+        let number =parseInt(prompt("Nhập vào số lượng số trong dãy số Fibonacci cần in ra:"));
+        for (let i=3; i<=number;i++) {
+            let x=x1+x2;
+            fibonacciString +=x+ ", ";
+            x1=x2;
+            x2=x
+        }
+        document.write(number + " số đầu tiên trong dãy số Fibonacci là :" + "<br>" + "<b>"+fibonacciString + "<b/>");
+    </script>
+
+</body>
+</html>

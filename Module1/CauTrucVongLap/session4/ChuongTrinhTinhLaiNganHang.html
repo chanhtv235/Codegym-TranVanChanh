@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính lãi ngân hàng</title>
+</head>
+<body>
+    <script>
+        let money=parseInt(prompt("Nhập vào số tiền gốc"));
+        let month=parseInt(prompt("Nhập vào số tháng đã vay"));
+        let rate=parseInt(prompt("Nhập vào lãi suất /tháng????%"));
+        let total=month;
+        for (let i=1;i<month;i++){
+            total +=total*rate/100;
+        }
+        alert("Với tiền gốc: "+ money +" bạn gửi ngân hàng sau: "+ month+" tháng"+ " với lãi suất: "+rate+ "%" + "\n"
+            + " Thì tổng số tiền hiện tại của bạn là: "+ total )
+    </script>
+</body>
+</html>

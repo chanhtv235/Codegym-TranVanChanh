@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiện thị ra 20 số trong dãy số Fibonacci</title>
+</head>
+<body>
+    <script>
+
+        let x1=0;
+        let x2=1;
+        let string= x1+", "+x2+", ";
+               for(i=3;i<=20;i++){
+             x=x1+x2;
+             string +=x+",  ";
+             x1=x2;
+             x2=x;
+         }
+         alert(string);
+
+    </script>
+</body>
+</html>

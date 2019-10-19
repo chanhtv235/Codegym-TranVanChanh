@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="Chơi" onclick="play()">
+    <script>
+        function play() {
+            let Number=parseInt(prompt("Nhập vào khoang số cần dự đoán từ 0 đến ????"));
+            let radomNumber= Math.floor(Math.random()*Number);
+            let count=1;
+
+            while (count<=3){
+                let inputNumber= parseInt(prompt("Nhập vào  số bạn cần dự đoán: "));
+                if (radomNumber==inputNumber) {
+                    alert("Số bạn dự đoán đã đúng")
+                    break;
+                }else if (inputNumber < radomNumber) {
+                    alert("Số bạn chọn nhỏ hơn kết quả,Yêu cầu bạn nhập lại");
+                }else {
+                    alert("Số bạn chọn lớn hơn kết quả,Yêu cầu bạn nhập lại");
+                }
+
+                count++;
+            }
+
+        }
+    </script>
+</body>
+</html>

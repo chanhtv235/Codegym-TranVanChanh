@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string="";
+    for (let i=1;i<=100;i++){
+        if(i%3==0&&i%5==0){
+            string += "BuzzFizz"+ ", ";
+        }else if(i%5==0){
+            string += "buzz"+ ", ";
+        }else if(i%3==0){
+            string += "Fizz" + ", ";
+        }else {
+            string += i+ ", ";
+        }
+    }
+    alert(string);
+</script>
+</body>
+</html>

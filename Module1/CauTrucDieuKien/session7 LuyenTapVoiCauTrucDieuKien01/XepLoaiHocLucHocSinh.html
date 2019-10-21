@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập vào điểm kiểm tra"));
+        let b = parseInt(prompt("Nhập vào điểm thi giữa kỳ"));
+        let c = parseInt(prompt("Nhập vào điểm thi cuối kỳ"));
+        let score=Math.round((a+b*2+c*3)/6);
+        let type=0;
+        if(score>=8){
+            type="Giỏi";
+        }else if (score>=7){
+            type="Khá";
+        } else if (score>=5){
+            type="Trung bình";
+        } else {
+            type="Yếu";
+        }
+        alert(type);
+    </script>
+</body>
+</html>

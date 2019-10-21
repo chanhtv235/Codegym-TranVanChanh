@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng theo doanh số bán hàng</title>
+</head>
+<body>
+    <script>
+        let doanhSo= parseInt(prompt("Nhập vào số tiền $"))
+        let hoaHong=0;
+        if(doanhSo>=1000){
+            hoaHong=doanhSo*0.15;
+        }else if(doanhSo>=500){
+            hoaHong=doanhSo*0.1;
+        }else {
+            hoaHong=doanhSo*0.05;
+        }
+        alert("Tiền hoa hồng của bạn là "+hoaHong);
+    </script>
+</body>
+</html>

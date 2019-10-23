@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược các phần tử mảng</title>
+</head>
+<body>
+    <script>
+        let x = [1,2,3,4,5,6];
+        let first=0;
+        let last= x.length
+        while (first<last){
+            let b= x[last];
+            x[last]=x[first];
+            x[first]=b;
+            first++;
+            last--;
+        }
+        alert("Mảng đảo ngược là :"+x);
+    </script>
+</body>
+</html>

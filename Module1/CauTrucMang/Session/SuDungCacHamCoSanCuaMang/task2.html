@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+<body>
+    <script>
+        let number =prompt("Enter a Number");
+        let string=number.toString();
+        let result=[string[0]];
+        for (let x=1;x<string.length;x++){
+            if (string[x-1]%2==0 && string[x]%2==0){
+                result.push("-",string[x]);
+            } else {
+                result.push(string[x]);
+            }
+        }
+        document.write(result.join(""));
+    </script>
+</body>
+</html>

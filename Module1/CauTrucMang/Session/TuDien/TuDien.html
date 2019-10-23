@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển Anh-Việt</title>
+</head>
+<body>
+    <h2> Từ Điển Anh-Việt</h2>
+    <b>Tiếng anh   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp  &nbsp&nbsp&nbsp&nbsp
+        Tiếng việt</b></br>
+    <input type="text" id="english" value="">
+    <input type="text" id="vietnam" value="">
+    <input type="button" value="Translate" onclick="dich()">
+    <script>
+        function dich(){
+            let english=document.getElementById('english').value;
+            let vietnam='';
+            let arrayEnglish=['you','she','he','they','it'];
+            let arrayVietNam=['Bạn','Cô ấy','Anh ấy','họ','nó'];
+            let i=0;
+            for (;i<arrayEnglish.length;i++){
+                if (english==arrayEnglish[i]){
+                    vietnam=arrayVietNam[i];
+                    document.getElementById('vietnam').value=vietnam;
+                    break;
+                }
+            }
+            if (i>=arrayEnglish.length){
+                alert("Từ nhập không có trong từ điển");
+            }
+        window.onload;
+        }
+
+</script>
+
+</body>
+</html>

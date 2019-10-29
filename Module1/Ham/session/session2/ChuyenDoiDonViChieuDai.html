@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi đơn vị chiều dài</title>
+</head>
+<body>
+    <input type="text" value="0" id="txt" oninput="convert(this.value)" onchange="convert(this.value)"/>
+    <select id="feet">
+        <option value="Meter">Meter</option>
+        <option value="Feet" selected> Feet</option>
+    </select>
+    <select id="meet"oninput="convert(txt.value)" >
+        <option value="Feet">Feet</option>
+        <option value="Meter" selected>Meter</option>
+    </select>
+    <p>Result: <span id="display"></span></p>
+
+    <script>
+
+        function convert(number) {
+            let result=0;
+            if (document.getElementById("meet").value=="Meter"&&document.getElementById("feet").value=="Feet"){
+                feet=number;
+                result=number+" feet = "+0.305 * feet+" m";
+             }else if (document.getElementById("meet").value=="Feet"&&document.getElementById("feet").value=="Meter") {
+                meter=number;
+                result=number+" m = "+3.279*meter+" feet";
+             }else {
+                result="Please choose the Unit again that you want convert";
+            }
+            document.getElementById("display").innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>

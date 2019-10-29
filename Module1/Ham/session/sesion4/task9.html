@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task9</title>
+</head>
+<body>
+<script>
+
+    let arrayString=["0","a","2","3","b","c","d","f","0","a","2","b","c","b","c"];
+    let  char=prompt("Enter a Number");
+    alert(findChar(arrayString,char));
+    ////////////////////////////////////////////////////////////////////////
+    function findChar(array,char) {
+        let count=0;
+        let result=0;
+        for (let i=0;i<array.length;i++){
+            if (char==array[i]) {
+                count++
+            }
+        }
+        if (count>=1) {
+            result=count;
+        }else {
+            result=-1;
+        }
+        return result;
+    }
+
+</script>
+</body>
+</html>

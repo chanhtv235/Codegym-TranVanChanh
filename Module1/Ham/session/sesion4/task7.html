@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task7</title>
+    <script>
+        function changeLocal(a,b) {
+           let temp=a;
+            a=b;
+            b=temp;
+           return  alert("After changing local: Number1= "+a+"  Number2= "+ b);
+        }
+    </script>
+</head>
+<body>
+<script>
+    let n1 = parseInt(prompt("Enter a Number1"));
+    let n2 = parseInt(prompt("Enter a Number2"));
+    changeLocal(n1,n2);
+</script>
+</body>
+</html>

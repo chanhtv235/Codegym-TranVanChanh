@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task5</title>
+    <script>
+        function findStar(name) {
+            let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'];
+            let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+            let result='';
+            for (let i=0;i<star.length;i++){
+                if (star[i]==name) {
+                    result=constellation[i];
+                    break;
+                }else {
+                    result="không tìm thấy chuỗi";
+                }
+            }
+            return result;
+        }
+    </script>
+</head>
+<body>
+    <script>
+
+        let name=prompt(" Enter the name of star");
+        alert("["+name+"]"+" star belong to "+"["+findStar(name)+"]"+" constellation");
+    </script>
+</body>
+</html>

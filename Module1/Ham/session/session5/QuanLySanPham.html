@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+    <script>
+        function display(array) {
+            let board="";
+            for (let i=0;i<array.length;i++) {
+                for (let j=0;j<3;j++) {
+                    board +=array[i][j]+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                }
+                board +="</br>";
+            }
+            document.getElementById("hienThi").innerHTML =board;
+        }
+        // /////////////////////////////////////////////////////////////////////////
+        function addElement(array,element) {
+            array[array.length] = [element,
+                "<input type=\"button\" value=\"Edit\" onclick=\"edit()\">",
+                "<input type=\"button\" value=\"Delete\" onclick=\"del(production)\">"];
+            display(array);
+        }
+        function edit(array) {
+
+        }
+        function del(array,i) {
+
+            array.splice(i,1);
+            display(array);
+        }
+    </script>
+</head>
+<body >
+    <input type="text" id="nameProductuon" value="">
+    <input type="button" value="Add" onclick="addElement(production,nameProductuon.value)">
+    <h2>Display All Production</h2>
+    <p id="hienThi"></p>
+
+    <script>
+
+        let production= [
+            ["Sony  ",
+                "<input type=\"button\" value=\"Edit\" onclick=\"edit()\">",
+                "<input type=\"button\" value=\"Delete\" onclick=\"del(production,0)\">"],
+            ["Samsung  ",
+                "<input type=\"button\" value=\"Edit\" onclick=\"edit()\">",
+                "<input type=\"button\" value=\"Delete\" onclick=\"del(production,0)\">"],
+            ["GL ",
+                "<input type=\"button\" value=\"Edit\" onclick=\"edit()\">",
+                "<input type=\"button\" value=\"Delete\" onclick=\"del(production,0)\">"],
+            ["Nokia  ",
+                "<input type=\"button\" value=\"Edit\" onclick=\"edit()\">",
+                "<input type=\"button\" value=\"Delete\" onclick=\"del()\">"],
+            ["Panasonic  ",
+                "<input type=\"button\" value=\"Edit\" onclick=\"edit()\">",
+                "<input type=\"button\" value=\"Delete\" onclick=\"del()\">"],
+            ];
+
+        display(production);
+
+    </script>
+</body>
+</html>

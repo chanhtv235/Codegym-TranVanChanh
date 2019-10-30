@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TempratureClass</title>
+</head>
+<body>
+    <script>
+        function Temperature(t) {
+            this.temperature = t;
+            this.changeKevil = function () {
+                return(t+273.15)
+            }
+            this.changeFahrenheit=function () {
+                return(t*1.8+32)
+            }
+        }
+        let temperature1= new Temperature(25);
+        document.write(temperature1.temperature+"oC= "+ temperature1.changeKevil()+"oK = "+temperature1.changeFahrenheit()+"oF");
+
+    </script>
+</body>
+</html>

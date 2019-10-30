@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh giá điện</title>
+</head>
+<body>
+    <script>
+        let number=parseInt(prompt("Nhập vào lượng điện tiêu thu trong tháng Kw"));
+        let typeService= prompt("Nhập vào loại hình dịch vụ(Hộ gia đình thì nhập GD,Hộ sản xuất nhập SX ");
+        let total=0;
+        let PRICE1=1000;
+        let PRICE2=1500;
+        let PRICE3=2000;
+        if (typeService=="GD"){
+            if(number>150){
+                total=(number-150)*PRICE3+50*PRICE2+100*PRICE1;
+            }else if (number>100) {
+                total=(number-100)*PRICE2+100*PRICE1;
+            }else{
+                total=number*PRICE1;
+            }
+        }else if (typeService=="SX"){
+            if(number>1000){
+                total=(number-1000)*PRICE3+200*PRICE2+800*PRICE1;
+            }else if(number>800) {
+                total=(number-800)*PRICE2+800*PRICE1;
+            }else{
+                total=number*PRICE1;
+            }
+        }else{
+            alert("bạn nhập lại loại hình dịch vụ")
+        }
+        alert(total);
+    </script>
+</body>
+</html>

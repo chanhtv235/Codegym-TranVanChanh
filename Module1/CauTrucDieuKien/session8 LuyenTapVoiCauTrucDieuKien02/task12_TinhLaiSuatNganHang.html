@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <script>
+        let money=parseInt(prompt("Nhập số tiền vay"));
+        let month=parseInt(prompt("Nhập số tháng đã vay"));
+        let laiSuat=parseInt(prompt("Nhập lãi suất ngân hàng"));
+        let total=0;
+        for (let i=1;i<=month;i++){
+            total +=(money+total)*laiSuat/100;
+        }
+        alert("Tiền lãi phải trả là"+total);
+    </script>
+</body>
+</html>

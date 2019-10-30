@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tạo lớp cho số điện thoại</title>
+</head>
+<body>
+    <script>
+
+
+        function Mobile(OnOff,battery,draft,inbox,sent) {
+            this.power = OnOff;
+            this.battery = battery;
+            this.draft = draft;
+            this.inbox = inbox;
+            this.sent = sent;
+
+            this.turnOn = function () {
+                if (this.power == "ON") {
+                    return true;
+                } else {
+                    return false;
+                    alert("Mobile Turn OFF");
+                }
+            };
+
+            this.chargingBattery = function () {
+                if (battery <= 90) {
+                    battery += 10
+                }
+                return battery;
+            };
+
+            this.makeDraft = function () {
+                if (this.turnOn() && this.battery > 0) {
+                    this.draft.push(prompt("Soan tin nhan"));
+                    this.battery--;
+                } else {
+                    alert(" Mobile Turn OFF")
+                }
+            };
+
+            this.sentMessage = function (mobile, message) {
+                if (this.turnOn() && this.battery > 0) {
+                    mobile.inbox.push(message);
+                    this.sent = message;
+                    this.draft.pop();
+                    this.battery--;
+                    mobile.battery--;
+                } else {
+                    alert(" Mobile Turn OFF")
+                }
+            };
+
+            this.receiveMessage = function () {
+                if (this.turnOn() && this.battery > 0) {
+
+                } else {
+                    alert(" Mobile Turn OFF")
+                }
+            };
+
+            this.showInBox = function () {
+                if (this.turnOn() && this.battery > 0) {
+                    alert(this.inbox);
+                    this.battery--;
+                } else {
+                    alert(" Mobile Turn OFF")
+                }
+            };
+
+            this.showSent = function () {
+                if (this.turnOn() && this.battery > 0) {
+                    alert(this.sent);
+                    this.battery--;
+                    } else {
+                        alert(" Mobile Turn OFF")
+                    }
+            };
+        }
+        let nokia = new Mobile("ON",100,[],[],[]);
+        let iphone = new Mobile("ON",100,[],[],[]);
+        nokia.makeDraft();
+        nokia.sentMessage(iphone,nokia.draft[nokia.draft.length -1]);
+        iphone.showInBox();
+        nokia.showSent();
+
+    </script>
+</body>
+</html>

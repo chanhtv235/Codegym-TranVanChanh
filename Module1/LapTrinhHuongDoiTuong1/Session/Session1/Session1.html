@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+    <script>
+        function Rectangle(lenght,width) {
+            this.length = lenght;
+            this.width = width;
+            this.getCircle = function () {
+                return (2*(lenght*width))
+            }
+            this.getArea = function () {
+                return(lenght*width);
+            }
+            this.showRectangle= function () {
+               let ctx= document.getElementById("myCanvas").getContext("2d");
+               ctx.beginPath();
+               ctx.rect(500,500,lenght,width);
+               ctx.fillStyle="red";
+               ctx.fill();
+            }
+        }
+         let rectangle1=new Rectangle(200,100);
+        rectangle1.showRectangle();
+        alert("Area= "+rectangle1.getArea()+"Circle = "+rectangle1.getCircle());
+    </script>
+</body>
+</html>

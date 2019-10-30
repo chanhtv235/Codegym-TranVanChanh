@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <tite></title>
+</head>
+<body>
+    <script>
+        let a =parseInt(prompt("Enter length of a;"));
+        let b =parseInt(prompt("Enter length of b;"));
+        let c =parseInt(prompt("Enter length of c;"));
+        function checkPositive(a,b,c) {
+            if(a>0&&b>0&&c>0){
+                return true
+            }else {
+                return false
+            }
+        }
+        function checkLength(a,b,c) {
+            if((a+b)>c&&(a+c)>b&&(c+b)>a){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        if(checkPositive(a,b,c)&&checkLength(a,b,c)){
+            alert("3 number is edge of a triangel")
+        }else {
+            alert("3 number is not edge of a triangel")
+        }
+    </script>
+</body>
+</html>

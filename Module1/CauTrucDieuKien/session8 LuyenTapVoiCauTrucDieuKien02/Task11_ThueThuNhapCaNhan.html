@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <script>
+        let money=parseInt(prompt("Nhập số tiền lương"));
+        let persion=parseInt(prompt("Nhập số lượng người phụ thuộc"))
+        let tax=0;
+        let TNTT=money-persion*3600000;
+        if(TNTT>80000000){
+            tax=TNTT *0.35 - 9850000;
+        }else if(TNTT>52000000){
+            tax=TNTT*0.30 - 5850000;
+        }else if(TNTT>32000000){
+            tax=TNTT*0.25- 3.250000;
+        }else if(TNTT>18000000){
+            tax=TNTT*0.2 - 1.650000;
+        }else if(TNTT>10000000){
+            tax= TNTT*0.15 - 750000;
+        }else if(TNTT>5000000){
+            tax=TNTT*0.1 - 250000;
+        }else if(TNTT>0){
+            tax=TNTT*0.05;
+        }else {
+            tax=0;
+        }
+        alert("Thuế thu nhập cá nhân cần nộp là:"+tax)
+    </script>
+</body>
+</html>

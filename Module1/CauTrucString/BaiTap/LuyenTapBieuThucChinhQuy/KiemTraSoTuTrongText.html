@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so tu trong chuoi</title>
+</head>
+<body>
+    <script>
+        function countWord(text){
+            let patt=/\w+/g;
+
+            let array=text.match(patt);
+            alert("The quality of text"+ text+ "is: "+array.length );
+        }
+        let text=prompt("Enter text");
+        countWord(text);
+    </script>
+</body>
+</html>

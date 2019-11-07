@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so dien thoai</title>
+</head>
+<body>
+    <script>
+        function testClassName(mobileNumber){
+            let patt=/^\d{2}0\d{9}$/;
+            if (patt.test(mobileNumber)) {
+                alert("Mobile Number : "+mobileNumber+" -hợp lệ");
+            }else {
+                alert("Mobile Number : "+mobileNumber+" -không hợp lệ");
+            }
+        }
+        let mobileNumber=prompt("Enter mobile Number");
+        testClassName(mobileNumber);
+    </script>
+</body>
+</html>

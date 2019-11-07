@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KiemTraPhuAm</title>
+</head>
+<body>
+    <script>
+        function countConsonant(text){
+            let patt1=/[a-z]/gi;
+            let patt2=/[aeiou]/gi;
+
+            let array1=text.match(patt1);
+            let array2=text.match(patt2);
+            alert("The Consonant quality of text--["+ text+ "]: "+ (array1.length-array2.length) );
+        }
+        let text=prompt("Enter text");
+        countConsonant(text);
+    </script>
+</body>
+</html>

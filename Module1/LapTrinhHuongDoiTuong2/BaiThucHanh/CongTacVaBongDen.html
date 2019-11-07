@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cong tac va bong den</title>
+</head>
+<body>
+<input type="button" value="ONOFF_LAMP" id="buttonSwitch" onclick="OnOff()">
+    <script>
+        function SwitchButton() {
+            this.status=true;
+           this.switchOnOff=function () {
+               this.status=!this.status;
+           };
+            this.conectLamp=function (lamp) {
+                lamp.status=this.status;
+            }
+        }
+        function ElectricLamp() {
+            this.status=1;
+            this.turnOn=function(){
+                alert('lamp is on');
+            }
+            this.turnOff=function () {
+                alert('lamp is off');
+            }
+
+        }
+        let switchButton = new SwitchButton();
+        let elecricLamp= new ElectricLamp();
+        function OnOff() {
+            switchButton.switchOnOff();
+            switchButton.conectLamp(elecricLamp);
+            if(elecricLamp.status){
+                elecricLamp.turnOn();
+            }
+            else {
+                elecricLamp.turnOff();
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function testAccount(account){
+            let patt=/^[_a-z0-9]{6,}$/
+            if (patt.test(account)) {
+                alert("account : "+account+" -hợp lệ");
+            }else {
+                alert("account : "+account+" -không hợp lệ");
+            }
+        }
+        let accont1="123abc_";
+        let accont2="_abc123";
+        let accont3="______";
+        let accont4="123456";
+        let accont5= "abcdefg";
+        let accont6=".@";
+        let accont7="12345";
+        let accont8="1234_";
+        let accont9="abcde";
+
+        testAccount(accont1);
+        testAccount(accont2);
+        testAccount(accont3);
+        testAccount(accont4);
+        testAccount(accont5);
+        testAccount(accont6);
+        testAccount(accont7);
+        testAccount(accont8);
+        testAccount(accont9);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Email</title>
+</head>
+<body>
+    <script>
+        function testEmail(mail){
+            let patt=/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/
+            if (patt.test(mail)) {
+                alert("email : "+mail+" -hợp lệ");
+            }else {
+                alert("email : "+mail+" -không hợp lệ");
+            }
+        }
+        let email1="abc@hotmail.com";
+        let email2="a@gmail.com";
+        let email3="ab@yahoo.com";
+        let email4="@gmail.com";
+        let email5= "ab@gmail.";
+        let email6="@#abc@gmail.com";
+        testEmail(email1);
+        testEmail(email2);
+        testEmail(email3);
+        testEmail(email4);
+        testEmail(email5);
+        testEmail(email6);
+    </script>
+</body>
+</html>

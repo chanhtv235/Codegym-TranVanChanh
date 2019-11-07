@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra nguyên âm</title>
+</head>
+<body>
+    <script>
+        function countVowel(text){
+            let patt=/[aeiou]/gi;
+
+            let array=text.match(patt);
+            alert("The Vowel quality of text--["+ text+ "]: "+array.length );
+        }
+        let text=prompt("Enter text");
+        countVowel(text);
+    </script>
+</body>
+</html>

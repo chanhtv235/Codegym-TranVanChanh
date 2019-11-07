@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KiemTraDinhDangNgayThang</title>
+</head>
+<body>
+    <script>
+        function testDateMonthYearForm(date){
+            let patt=/^(0[1-9]||[1-2]\d||3[0-1])\/([0][1-9]||[1][0-2])\/[1-2]\d{3}$/;
+            if (patt.test(date)) {
+                alert("dd/mm/yyyy : "+date+" -hợp lệ");
+            }else {
+                alert("dd/mm/yyyy : "+date+" -không hợp lệ");
+            }
+        }
+        let date=prompt("Enter Class Name");
+        testDateMonthYearForm(date);
+    </script>
+</body>
+</html>

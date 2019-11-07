@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let birthday=new Date("1985-03-02 0:0:0")
+        let date = new Date();
+       let milisecond=date.getTime()- birthday.getTime();
+       let year=milisecond/31536000000;
+       let month=year*12;
+       let day=year*363;
+       alert(parseInt(year));
+       alert(parseInt(month));
+       alert(parseInt(day));
+       alert(parseInt(milisecond));
+
+    </script>
+</body>
+</html>

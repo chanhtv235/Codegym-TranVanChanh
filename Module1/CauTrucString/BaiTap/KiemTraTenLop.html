@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function testClassName(className){
+            let patt=/^[C,A,P][0-9]{4}[G,H,I,K,M]$/;
+            if (patt.test(className)) {
+                alert("Class Name : "+className+" -hợp lệ");
+            }else {
+                alert("Class Nam : "+className+" -không hợp lệ");
+            }
+        }
+        let className=prompt("Enter Class Name");
+        testClassName(className);
+    </script>
+</body>
+</html>

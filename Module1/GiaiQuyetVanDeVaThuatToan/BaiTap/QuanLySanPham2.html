@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+
+</head>
+<body >
+    <input type="text" id="nameProductuon" value="">
+    <input type="button" value="Add" onclick="addElement()">
+    <h2>Display All Production</h2>
+    <p id="hienThi"></p>
+    <script>
+        let arr= [];
+        function display(array) {
+            let board="";
+            for (let i=0;i<array.length;i++) {
+                board +="<table  border='1'><td STYLE='width: 200px' HEIGHT='30' bgcolor='#7fffd4'>"+array[i]+"</td>"
+                        +"<td><input id="+i+" type='button' value='delete' onclick='del(arr,this.id)'></td>"
+                        +"<td><input id="+i+" type='button' value='Edit' onclick='edit(arr,this.id)'></td></table>";
+                board +="</br>";
+            }
+            document.getElementById("hienThi").innerHTML =board;
+        }
+
+        // /////////////////////////////////////////////////////////////////////////
+        function addElement() {
+            let sp=document.getElementById("nameProductuon").value;
+            arr.push(sp)
+            display(arr);
+        }
+        function edit(array,i) {
+            array[i]=prompt("Edit production name");
+            display(arr);
+        }
+        function del(array,i) {
+            array.splice(i,1);
+            display(array);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr=["0860944890","0962369338","09760526436","0895604250","0940150500","0473574258",
+            "0770944890","0779369338","0277526436","0776712520"];
+        let patt=/(03[2-9]|09[6-8]|086)\d{7}/;
+        let arrViettel=[];
+        for (var i = 0; i < arr.length; ++i) {
+            if (patt.test(arr[i])) {
+                arrViettel.push(arr[i]);
+                }
+            }
+        alert("So dien thoai cua nha mang Viettel  "+arrViettel);
+    </script>
+</body>
+</html>

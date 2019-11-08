@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count the same values in a Array</title>
+</head>
+<body>
+    <script>
+
+        function displayArr(arr) {
+            let str="";
+            for (let i=0;i<arr.length;i++){
+                str +=arr[i]+" ";
+                if (i%10==9){
+                    str +="<br>";
+                }
+            }
+            return str;
+        }
+        function countTheSameValue(arr,value){
+            let count=0;
+            for (let i=0;i<arr.length;i++){
+                if (value==arr[i]){
+                    count++;
+                }
+            }
+            return count;
+        }
+        ////////////////////////////////
+        let arrNumber=[];
+        for (let i=0;i<100;i++){
+            arrNumber[i]=Math.floor(Math.random()*101);
+        }
+        let number=prompt(" Enter a Number to search:")
+        document.write(displayArr(arrNumber)+"<br>");
+        document.write("Find "+number+" at position "+countTheSameValue(arrNumber,number));
+        
+    </script>
+</body>
+</html>

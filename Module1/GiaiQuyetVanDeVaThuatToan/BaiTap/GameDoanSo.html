@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Doan so</title>
+</head>
+<body>
+    <script>
+        let arrTemp=[];
+        for (let i=0;i<50;i++){
+            arrTemp[i]=i;
+        }
+        let ramdomNumber=Math.floor(Math.random()*50);
+        let status=0;
+        let inputNumber=-1;
+        do {
+            inputNumber=parseInt(prompt("Enter a number that you want choose"+arrTemp[0]+'  '+arrTemp[arrTemp.length-1]));
+             while (!arrTemp.includes(inputNumber)){
+                inputNumber=parseInt(prompt("Enter a number that you want choose"+arrTemp[0]+'  '+arrTemp[arrTemp.length-1]));
+            }
+                if(inputNumber===ramdomNumber){
+                    alert("You are right");
+                    break;
+                }else if (inputNumber<ramdomNumber){
+                   // alert("So ban nhap vao phai >"+inputNumber);
+                    arrTemp=arrTemp.splice(arrTemp.indexOf(inputNumber),arrTemp.length);
+                    status=true;
+                    alert(arrTemp);
+                }else{
+                   // alert("So ban nhap vao phai < "+inputNumber);
+                    arrTemp=arrTemp.splice(0,arrTemp.indexOf(inputNumber));
+                    status=true;
+                    alert(arrTemp);
+                }
+        }while (status);
+        document.write(displayArr(arrNumber)+"<br>");
+
+    </script>
+</body>
+</html>

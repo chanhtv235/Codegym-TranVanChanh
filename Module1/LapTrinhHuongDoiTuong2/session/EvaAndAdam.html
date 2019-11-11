@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eva And Adam</title>
+</head>
+<body>
+    <script>
+        function Apple() {
+
+            this.weight=10;
+            this.getWeight=function () {
+                return this.weight;
+            }
+            this.decrease= function () {
+                this.weight--;
+            }
+            this.isEmpty = function () {
+                if (this.weight===0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        }
+        function Human(name,) {
+            this.setName= function (name) {
+                this.name=name;
+            }
+            this.getName=function () {
+                return this.name;
+
+            }
+            this.setWeight =function (weight) {
+                this.weight=weight;
+            }
+            this.getWeight= function () {
+                return this.weight;
+            }
+            this.setGender=function (gender) {
+                this.gender=gender;
+            }
+            this.isMale=function () {
+                if(this.gender==="male"){
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+            this.say=function (string) {
+                alert(string);
+            }
+            this.checkApple=function (Apple) {
+                if (Apple.isEmpty()===false){
+                  return   true;
+                }else {
+                   return false;
+                }
+            }
+            this.eat=function (Apple) {
+                if (this.checkApple(Apple)){
+                    this.weight++;
+                    Apple.decrease();
+                }else {
+                    alert("Táo đã hết");
+                }
+
+            }
+        }
+        let apple =new Apple();
+        //apple.setWeight(2);
+        let Eva = new Human();
+        let Adame = new Human();
+        Eva.setName("Eva");
+        Eva.setGender("femal");
+        Eva.setWeight(40);
+        Adame.setName("Adam");
+        Adame.setGender("male");
+        Adame.setWeight(50);
+
+        alert(apple.getWeight());
+
+        Eva.say("Anh ăn táo đi Adam");
+        Adame.eat(apple);
+        alert(Adame.getWeight());
+        alert(apple.getWeight());
+
+        Adame.say("Anh ăn rồi, em ăn đi Eva");
+        Eva.eat(apple);
+        alert(Eva.getWeight());
+        alert(apple.getWeight());
+
+        Eva.say("Anh ăn táo đi Adam");
+        Adame.eat(apple);
+        alert(Adame.getWeight());
+        alert(apple.getWeight());
+
+    </script>
+</body>
+</html>

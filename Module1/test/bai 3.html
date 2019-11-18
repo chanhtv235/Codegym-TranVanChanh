@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let str=prompt("Nhập vào Họ và tên của bạn:");
+        str=str.split(" ").filter(value => value !=="").join(" ");
+
+            // str=eraseSpaceNotNecessary(str);
+            // str=toUpperCase_FirstChar(str);
+            alert(str);
+      //Hàm bỏ khoảng trắng;
+        function eraseSpaceNotNecessary(str) {
+            str=str.trim();
+            for (let i=0;i<str.length;i++) {
+                if (str.charAt(i) === " ") {
+                    str = str.substring(0, i) + " " + str.substring(i + 1, str.length).trim();
+                }
+            }
+            console.log(str);
+            return str
+        }
+        // Hàm tạo các ký tự đầu in HOA
+        function toUpperCase_FirstChar(str) {
+            str = str.toLowerCase();
+            str = str.replace(str.charAt(0),str.charAt(0).toUpperCase());
+            for (let i=0;i<str.length;i++){
+                if (str.charAt(i)==" "){
+                    str=str.replace(str.charAt(i+1),str.charAt(i+1).toUpperCase());
+                }
+            }
+            return str;
+        }
+    </script>
+
+</body>
+</html>

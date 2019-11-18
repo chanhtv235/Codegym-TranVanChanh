@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="display()">
+<div id="board"></div>
+<script>
+    let check=true;
+    let arrBin=[];
+    for (let i=0;i<20;i++) {
+        arrBin[i]=new Array();
+        for (let j=0;j<20;j++){
+            arrBin[i][j]="";
+        }
+    }
+    function display() {
+        let i, j;
+        let board = "<table border='1' style='top: 10px'>";
+        for (i = 0; i < 20; i++) {
+            board+="<tr >";
+            for (j = 0; j < 20; j++) {
+                board += "<td  style='width: 20px ;height: 20px'  onclick='play(" + i + "," + j+") '>"+arrBin[i][j]+"</td>";
+            }
+            board += "<tr>";
+        }
+        board += "</table>";
+        document.getElementById("board").innerHTML=board;
+    }
+    function play(x,y) {
+        if (arrBin[x][y]=="O"||arrBin[x][y]=="X") {
+            alert("Ban khong dc nhan vao o nay")
+        }else {
+            if (check) {
+                arrBin[x][y]="O";
+                check=false;
+                display();
+                checkVictory();
+            }else {
+                arrBin[x][y]="X";
+
+                check=true;
+                display();
+                checkVictory();
+            }
+        }
+    }
+    function checkVictory() {
+        for (i = 0; i < 20; i++) {
+            for (j = 0; j < 20; j++) {
+                if (arrBin[i][j]=="X"){
+                    if (arrBin[i][j+1]=="X"&&arrBin[i][j+2]=="X") {
+                        alert("Chuc mung nguoi choi so 2 thang");
+                    }else if (arrBin[i+1][j]=="X"&&arrBin[i+2][j]=="X") {
+                        alert("Chuc mung nguoi choi so 2 thang");
+                    }else if (arrBin[i+1][j+1]=="X"&&arrBin[i+2][j+2]=="X"){
+                        alert("Chuc mung nguoi choi so 2 thang");
+                    }
+                }
+            }
+        }
+
+        for (i = 0; i < 20; i++) {
+            for (j = 0; j < 20; j++) {
+                if (arrBin[i][j]=="O"){
+                    if (arrBin[i][j+1]=="O"&&arrBin[i][j+2]=="O") {
+                        alert("Chuc mung nguoi choi so 2 thang");
+                    }else if (arrBin[i+1][j]=="O"&&arrBin[i+2][j]=="O") {
+                        alert("Chuc mung nguoi choi so 2 thang");
+                    }else if (arrBin[i+1][j+1]=="O"&&arrBin[i+2][j+2]=="O"){
+                        alert("Chuc mung nguoi choi so 2 thang");
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

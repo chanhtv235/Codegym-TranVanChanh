@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let n= prompt("Nhập vào một số nguyên dương có 4 chữ số");
+        isNumber(n);
+        ////////////////////////////////////////////
+        function isNumber(n) {
+            let n1=parseInt(n.charAt(0));
+            let n2=parseInt(n.charAt(1));
+            let n3=parseInt(n.charAt(2));
+            let n4=parseInt(n.charAt(3));
+            let check=(n1+n2)===(n3-n4);
+            if (check) {
+            alert("True")
+            }else {
+                alert("False")
+            }
+        }
+
+    </script>
+</body>
+</html>

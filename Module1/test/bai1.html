@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let check=false;
+        let arr=[];
+        do {
+
+            let n = parseInt(prompt("nhập vào số lượng phần tử mảng n > 6"));
+            if(n<=6){
+            check=true;
+            }else {
+                check=false;
+                for (let i=0;i<n;i++) {
+                    arr[i]=prompt("Nhập vào phần tử thứ "+i);
+                }
+            }
+        }while (check);
+        alert("Mảng trước khí sắp xếp: "+arr);
+        alert("Mảng sau khi sắp xếp lại "+arr.sort());
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Mouse.js"></script>
+    <script src="Cat.js"></script>
+</head>
+<body>
+    <script>
+        let mouse= new Mouse();
+        mouse.setNameMouse("Jerry");
+        mouse.setWeightMouse(1);
+        let cat=new Cat();
+        cat.setNameCat("Tom");
+        cat.setWeightCat(50);
+        cat.setSpeedCat(20);
+        let weight=cat.getWeightCat();
+        let count=0;
+        for (let i=0;i<20;i++){
+            let random=Math.round(Math.random());
+            mouse.setSatusMouse(random);
+            mouse.setSpeedMouse(10);
+            cat.catEatMouse(mouse);
+            if (cat.catEatMouse(mouse)) {
+                count++;
+            }
+        }
+        alert(cat.getNameCat()+count+"Mouses. The cat weight :"+weight);
+    </script>
+
+</body>
+</html>

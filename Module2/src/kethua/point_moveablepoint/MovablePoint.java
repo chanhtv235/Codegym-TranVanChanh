@@ -42,13 +42,19 @@ public class MovablePoint extends Point {
         return speed;
     }
 
-    public String move(){
-        this.setX(this.getX()+this.getxSpeed());
-        this.setY(this.getY()+this.getySpeed());
-        return this.getX()+","+this.getY();
+    public MovablePoint move(){
+        this.x+=this.xSpeed;
+        this.y+=this.ySpeed;
+        return this;
     }
+
     @Override
     public String toString() {
-        return "MovablePoint={" +move()+"},speed={"+ xSpeed +"," + ySpeed +'}';
+        return "MovablePoint{" +
+                "x=" + getX()+
+                ", y=" + getY() +
+                ", xSpeed=" + xSpeed +
+                ", ySpeed=" + ySpeed +
+                '}';
     }
 }

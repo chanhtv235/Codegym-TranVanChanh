@@ -1,8 +1,8 @@
 package kethua.point_moveablepoint;
 
 public class Point {
-    private float x;
-    private float y;
+     float x;
+     float y;
 
     public float getX() {
         return x;
@@ -38,6 +38,6 @@ public class Point {
     }
     @Override
     public String toString() {
-        return "Point{"+this.x+","+y+"}";
+        return "Point{"+this.x+","+y+"} o";
     }
 }

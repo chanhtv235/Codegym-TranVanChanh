@@ -1,19 +1,19 @@
-package models;
+package CaseStudyJavaCoreFuramaResort.src.models;
 
 import java.util.Scanner;
 import java.util.UUID;
 
 public abstract class Services {
-    private String id;
-    private String name;
-    private float area;
-    private float rentCost;
+    private String iDService;
+    private String nameService;
+    private double area;
+    private double rentCost;
     private int personLimit;
     private String rentType;
 
-    public Services(String name, String id,float area, float rentCost, int personLimit, String rentType) {
-        this.name = name;
-        this.id=id;
+    public Services(String nameService, String iDService,double area, double rentCost, int personLimit, String rentType) {
+        this.nameService = nameService;
+        this.iDService=iDService;
         this.area = area;
         this.rentCost = rentCost;
         this.personLimit = personLimit;
@@ -23,33 +23,33 @@ public abstract class Services {
 
     }
 
-    public void setId(String id) {
-        this.id=id;}
+    public void setIDService(String iDService) {
+        this.iDService=iDService;}
 
-    public String getId() {
-        return this.id;}
+    public String getIDService() {
+        return this.iDService;}
 
-    public String getName() {
-        return name;
+    public String getNameService() {
+        return nameService;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameService(String nameService) {
+        this.nameService = nameService;
     }
 
-    public float getArea() {
+    public double getArea() {
         return area;
     }
 
-    public void setArea(float area) {
+    public void setArea(double area) {
         this.area = area;
     }
 
-    public float getRentCost() {
+    public double getRentCost() {
         return rentCost;
     }
 
-    public void setRentCost(float rentCost) {
+    public void setRentCost(double rentCost) {
         this.rentCost = rentCost;
     }
 
@@ -70,35 +70,12 @@ public abstract class Services {
     }
 
     public String ShowInfo(){
-        return "serviceType "+getName()+
-                "\nID "+getId()+
-                "\nArea: "+getArea()+
-                "\nRental Cost: "+ getRentCost()+
-                "\nMaxium person"+getPersonLimit()+
-                "\nRent type:"+getRentType();
+        return "\nId Service: " + getIDService()+
+                "\nServiceType: " +getNameService()+
+                "\nArea: " + getArea()+
+                "\nRental Cost: " + getRentCost()+
+                "\nMaxium person: " +getPersonLimit()+
+                "\nRent type: " + getRentType();
     };
 
-//    public  void AddService(){
-//        Scanner input;
-//        input=new Scanner(System.in);
-//        System.out.println("Enter Service Name");
-//        this.setName(input.nextLine());
-//        System.out.println("Enter ID");
-//        this.setId(UUID.randomUUID().toString().replace("-","")) ;
-//        System.out.println("Enter Area");
-//        this.setArea(input.nextFloat());
-//        System.out.println("Enter rental Cost");
-//        this.setRentCost(input.nextFloat());
-//        System.out.println("Enter rental Type");
-//        input=new Scanner(System.in);
-//        this.setRentType(input.nextLine());
-//        System.out.println("Enter number person limit");
-//        this.setPersonLimit(input.nextInt());
-//    }
-
-    @Override
-    public String toString() {
-        return ""+ id + ","  + name+ ","  + area+ ","  + rentCost+ ","  + personLimit+ "," + rentType+ "," ;
-
-    }
 }

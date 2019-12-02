@@ -1,23 +1,23 @@
-package models;
+package CaseStudyJavaCoreFuramaResort.src.models;
 
 import java.util.Scanner;
 
 public class Villa extends VipServices {
-    private float poolArea;
+    private double poolArea;
 
-    public float getPoolArea() {
+    public double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(float poolArea) {
+    public void setPoolArea(double poolArea) {
         this.poolArea = poolArea;
     }
     public Villa(){
 
     }
 
-    public Villa(String name, String id, float area, float rentCost, int personLimit, String rentType, String roomStandard, String convenient, int floorNumber, float poolArea) {
-        super(name, id, area, rentCost, personLimit, rentType, roomStandard, convenient, floorNumber);
+    public Villa(String nameService, String iDService , double area, double rentCost, int personLimit, String rentType, String roomStandard, String convenient, int floorNumber, double poolArea) {
+        super(nameService, iDService, area, rentCost, personLimit, rentType, roomStandard, convenient, floorNumber);
         this.poolArea = poolArea;
     }
 
@@ -27,16 +27,4 @@ public class Villa extends VipServices {
                 "\nPool area: "+getPoolArea();
     }
 
-//    @Override
-//    public void AddService() {
-//        Scanner input=new Scanner(System.in);
-//        super.AddService();
-//        System.out.println("Enter pool area");
-//        this.setPoolArea(input.nextFloat());
-//    }
-
-    @Override
-    public String toString() {
-        return super.toString()+poolArea;
-    }
 }

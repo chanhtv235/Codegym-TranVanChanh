@@ -1,6 +1,6 @@
 package models;
 
-import java.util.Scanner;
+import CaseStudyJavaCoreFuramaResort.src.models.Services;
 
 public class Room extends Services {
     private String freeServices;
@@ -22,14 +22,7 @@ public class Room extends Services {
 
     @Override
     public String  ShowInfo() {
-        return super.ShowInfo()+
-                "Free Service:"+freeServices;
+        return super.ShowInfo()+"\nFree Service:"+freeServices;
     }
-//    @Override
-//    public void AddService() {
-//        Scanner input =new Scanner(System.in);
-//        super.AddService();
-//        System.out.println("Enter free service");
-//        this.setFreeServices(input.nextLine());
-//    }
+
 }

@@ -1,7 +1,6 @@
-package views;
+package CaseStudyJavaCoreFuramaResort.src.views;
 
-import controllers.MainController;
-import models.*;
+import CaseStudyJavaCoreFuramaResort.src.controllers.MainController;
 
 import java.io.IOException;
 

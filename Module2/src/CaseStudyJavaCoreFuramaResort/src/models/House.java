@@ -1,4 +1,6 @@
-package models;
+package CaseStudyJavaCoreFuramaResort.src.models;
+
+import CaseStudyJavaCoreFuramaResort.src.models.VipServices;
 
 public class House extends VipServices {
     private String roomStandard;
@@ -17,13 +19,4 @@ public class House extends VipServices {
        return super.ShowInfo();
     }
 
-//    @Override
-//    public void AddService() {
-//        super.AddService();
-//    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }

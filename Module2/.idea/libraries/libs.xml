@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/CaseStudyJavaCoreFuramaResort/src/libs/opencsv-4.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/CaseStudyJavaCoreFuramaResort/src/libs/commons-lang3-3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/CaseStudyJavaCoreFuramaResort/src/libs/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/CaseStudyJavaCoreFuramaResort/src/libs/opencsv-5.0.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/CaseStudyJavaCoreFuramaResort/src/libs" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/src/CaseStudyJavaCoreFuramaResort/src/libs" recursive="false" />
+  </library>
+</component>

@@ -21,6 +21,7 @@ public class FuncWriteFileCSV {
     private static final String pathHouse="src/CaseStudyJavaCoreFuramaResort/src/data/House.csv";
     private static final String pathRoom="src/CaseStudyJavaCoreFuramaResort/src/data/Room.csv";
     private static final String pathCustomer="src/CaseStudyJavaCoreFuramaResort/src/data/Customer.csv";
+    private static final String pathBooking="src/CaseStudyJavaCoreFuramaResort/src/data/Booking.csv";
     private static String[] headerRecordVilla=new String[]{"iDService",
                                                             "nameService",
                                                             "area",
@@ -57,6 +58,23 @@ public class FuncWriteFileCSV {
                                                                 "customerType",
                                                                 "customerAddress",
                                                                 };
+    private static String[] headerRecordBooking=new String[]{  "iD",
+                                                                "customerName",
+                                                                "birthdayOfCustomer",
+                                                                "gender",
+                                                                "customerId",
+                                                                "customerPhone",
+                                                                "customerEmail",
+                                                                "customerType",
+                                                                "customerAddress",
+                                                                "iDService",
+                                                                "nameService",
+                                                                "area",
+                                                                "rentCost",
+                                                                "personLimit",
+                                                                "rentType",
+
+    };
     // the line number to skip for start reading
     private static final int NUM_OF_LINE_SKIP=1;
     //funcion write Villa...............................................
@@ -169,6 +187,40 @@ public class FuncWriteFileCSV {
             System.out.println(ex.getMessage());
         }
     }
+    // writer Booking to file booking CSV
+    //funcion write Customer...............................................
+    public static void writeBookingToFileSCV(ArrayList<Customer> arrayList){
+        try(Writer writer =new FileWriter(pathBooking);
+            CSVWriter csvWriter=new CSVWriter(writer,
+                    CSVWriter.DEFAULT_SEPARATOR,
+                    CSVWriter.NO_QUOTE_CHARACTER,
+                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+                    CSVWriter.DEFAULT_LINE_END)) {
+            csvWriter.writeNext(headerRecordBooking);
+            for (Customer customer:arrayList){
+                csvWriter.writeNext(new String[]{
+                        customer.getID(),
+                        customer.getCustomerName(),
+                        customer.getBirthdayOfCustomer(),
+                        customer.getGender(),
+                        customer.getCustomerId(),
+                        customer.getCustomerPhone(),
+                        customer.getCustomerEmail(),
+                        customer.getCustomerType(),
+                        customer.getCustomerAddress(),
+                        customer.getCustomerUseServieceType().getIDService(),
+                        customer.getCustomerUseServieceType().getNameService(),
+                        String.valueOf(customer.getCustomerUseServieceType().getArea()),
+                        String.valueOf(customer.getCustomerUseServieceType().getRentCost()),
+                        String.valueOf(customer.getCustomerUseServieceType().getPersonLimit()),
+                        customer.getCustomerUseServieceType().getRentType()
+                });
+            }
+        } catch (IOException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+    }
 
     // funcion get Villa from file Customer.csv
     public static ArrayList<Villa> getVillaFromCSV(){
@@ -273,6 +325,34 @@ public class FuncWriteFileCSV {
         CsvToBean<Customer> csvToBean =null;
         try {
             csvToBean = new CsvToBeanBuilder<Customer>(new FileReader(pathCustomer))
+                    .withMappingStrategy(strategy)
+                    .withSeparator(DEFAULT_SEPRATOR)
+                    .withQuoteChar(DEFAULT_QUOTE)
+                    .withSkipLines(NUM_OF_LINE_SKIP)
+                    .withIgnoreLeadingWhiteSpace(true)
+                    .build();
+        }catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        }
+        assert csvToBean != null;
+        return (ArrayList<Customer>) csvToBean.parse();
+    }
+    // funcion get Villa from file Customer.csv
+    public static ArrayList<Customer> getBookingFromCSV(){
+        Path path = Paths.get(pathBooking);
+        if (!Files.exists(path)){
+            try {
+                Writer writer =new FileWriter(pathBooking);
+            }catch (IOException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        ColumnPositionMappingStrategy<Customer> strategy = new ColumnPositionMappingStrategy<>();
+        strategy.setType(Customer.class);
+        strategy.setColumnMapping(headerRecordBooking);
+        CsvToBean<Customer> csvToBean =null;
+        try {
+            csvToBean = new CsvToBeanBuilder<Customer>(new FileReader(pathBooking))
                     .withMappingStrategy(strategy)
                     .withSeparator(DEFAULT_SEPRATOR)
                     .withQuoteChar(DEFAULT_QUOTE)

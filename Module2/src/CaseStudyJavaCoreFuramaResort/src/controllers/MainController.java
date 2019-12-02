@@ -92,8 +92,11 @@ public class MainController {
         System.out.println( "1. Show All Villa\n"+
                 "2. Show All House\n"+
                 "3. Show All Room\n" +
-                "4. Back to menu\n"+
-                "5. Exit");
+                "4. Show All Name Villa Not Duplicate\n" +
+                "5. Show All Name House Not Duplicate\n" +
+                "6. Show All Name Name Not Duplicate\n"+
+                "7. Back to menu\n"+
+                "8. Exit");
         Scanner input =new Scanner(System.in);
         int selection3=input.nextInt();
         switch (selection3){
@@ -110,9 +113,18 @@ public class MainController {
                 backMainMenu();
             break;
             case 4:
+                showAllNameVillaNotDuplicate();
                 backMainMenu();
                 break;
-            case 5: System.exit(0);
+            case 5:
+                showAllNameHouseNotDuplicate();
+                backMainMenu();
+                break;
+            case 6:
+                showAllNameRoomNotDuplicate();
+                backMainMenu();
+                break;
+            case 7: System.exit(0);
             default:
                 System.out.println("Enter try Again");
                backMainMenu();
@@ -181,42 +193,38 @@ public class MainController {
         FuncWriteFileCSV.writeCustomerToFileSCV(listCustomer);
     }
 
-    private static String getCustomerList(ArrayList<Customer>arrayList){
-        int i=1;
-        String content="";
-        for (Customer customer:arrayList){
-            content+= i++ +". "+customer.getCustomerName()+"\n";
-        }
-        return content;
-    }
-
     private static void addNewBookingResort(){
         ArrayList<Customer>customerList=FuncWriteFileCSV.getCustomerFromCSV();
-        System.out.println(getCustomerList(customerList));
+        ///Show customer name
+        System.out.println("Display Customer list");
+        displayCustomerList(customerList);
+        Scanner input =new Scanner(System.in);
+        System.out.println("Select customer to booking");
+        // get customer in customerlist
+        Customer customer=customerList.get(input.nextInt()-1);
         System.out.println(
                 "1. Booking Villa\n"+
                 "2. Booking House\n"+
                 "3. Booking Room\n" +
                 "4. Back \n"+
                 "5. Exit"
-        );
-        Scanner input =new Scanner(System.in);
-        int selection3=input.nextInt();
-        switch (selection3){
+                );
+        System.out.println("Selec type service booking for customer");
+        switch (input.nextInt()){
             case 1:
                 System.out.println("1.Booking  Villa\n");
-                bookingVilla();
-                addNewBookingResort();
+                bookingVilla(customer);
+                backMainMenu();
                 break;
             case 2:
                 System.out.println("2.Booking  House\n");
-                bookingHouse();
-                addNewBookingResort();
+                bookingHouse(customer);
+                backMainMenu();
                 break;
             case 3:
                 System.out.println("2.Booking  Room\n");
-                bookingRoom();
-                addNewBookingResort();
+                bookingRoom(customer);
+                backMainMenu();
                 break;
             case 4: backMainMenu();
                 break;
@@ -399,13 +407,69 @@ public class MainController {
         System.out.println("----------------------------------------------");
     }
 
-    private static void bookingVilla(){
+    private static void displayCustomerList(ArrayList<Customer>arrayList){
+        int i=1;
+        String content="";
+        for (Customer customer:arrayList){
+            content+= i++ +". "+customer.getCustomerName()+"\n";
+        }
+        System.out.println(content);
+    }
+
+    private static void bookingVilla(Customer customer){
+    ArrayList<Villa> villaList =FuncWriteFileCSV.getVillaFromCSV();
+        int i=1;
+        String content="";
+        for (Villa villa:villaList){
+            content+= i++ +". "+villa.getNameService()+"\n";
+        }
+        System.out.println(content);
+        System.out.println(" Select Villa type for customer");
+        Scanner input =new Scanner(System.in);
+        Villa villa= villaList.get(input.nextInt()-1);
+        customer.setCustomerUseServieceType(villa);
+        //Writer Boking to file CSV booking
+        ArrayList<Customer> listBooking=new ArrayList<Customer>();
+        listBooking.add(customer);
+        FuncWriteFileCSV.writeBookingToFileSCV(listBooking);
+    }
+
+    private static void bookingHouse(Customer customer){
+        ArrayList<House> houseList =FuncWriteFileCSV.getHouseFromCSV();
+        int i=1;
+        String content="";
+        for (House house:houseList){
+            content+= i++ +". "+house.getNameService()+"\n";
+        }
+        System.out.println(content);
+        System.out.println(" Select House type for customer");
+        Scanner input =new Scanner(System.in);
+        House house= houseList.get(input.nextInt()-1);
+        customer.setCustomerUseServieceType(house);
+    }
+
+    private static void bookingRoom(Customer customer){
+        ArrayList<Room> roomList =FuncWriteFileCSV.getRoomFromCSV();
+        int i=1;
+        String content="";
+        for (Room room:roomList){
+            content+= i++ +". "+room.getNameService()+"\n";
+        }
+        System.out.println(content);
+        System.out.println(" Select Room type for customer");
+        Scanner input =new Scanner(System.in);
+        Room room= roomList.get(input.nextInt()-1);
+        customer.setCustomerUseServieceType(room);
+    }
+
+    private static void showAllNameVillaNotDuplicate(){
 
     }
-    private static void bookingHouse(){
+    private static void showAllNameHouseNotDuplicate(){
 
     }
-    private static void bookingRoom(){
+    private static void showAllNameRoomNotDuplicate(){
 
     }
+
 }

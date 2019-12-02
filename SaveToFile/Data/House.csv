@@ -1,0 +1,3 @@
+id,nameService,areaUsed,rentalCosts,maxNumberOfPeople,typeRent,roomStandard,convenientDescription,numberOfFloors
+937fcb001d9f4bf6986890de8009a690,House,33.0,3.0,3,Kie,Kien,,10
+355f043e57854f9e8dfb9f4c5ea9a360,House,34.0,30.0,10,Kie,Kie,Kie,10

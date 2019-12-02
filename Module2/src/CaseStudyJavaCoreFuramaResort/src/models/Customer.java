@@ -3,6 +3,7 @@ package CaseStudyJavaCoreFuramaResort.src.models;
 import java.util.Date;
 
 public class Customer {
+    private String iD;
     private String customerName;
     private String  birthdayOfCustomer;
     private String gender;
@@ -13,9 +14,10 @@ public class Customer {
     private String customerAddress;
     private Services customerUseServieceType;
 
-    public Customer(String customerName, String birthdayOfCustomer, String gender, String customerId,
+    public Customer(String  id,String customerName, String birthdayOfCustomer, String gender, String customerId,
                     String customerPhone, String customerEmail, String customerType, String customerAddress,
                     Services customerUseServieceType) {
+        this.iD=id;
         this.customerName = customerName;
         this.birthdayOfCustomer = birthdayOfCustomer;
         this.gender = gender;
@@ -28,6 +30,12 @@ public class Customer {
     }
     public Customer(){
 
+    }
+    public String getID(){
+        return this.iD;
+    }
+    public void setID(String iD){
+        this.iD=iD;
     }
     public String getCustomerName() {
         return customerName;
@@ -102,10 +110,11 @@ public class Customer {
     }
     public String ShowInFo() {
         return
+                "\nID: "+ iD +
                 "\nCustomerName: "+ customerName +
                 "\nBirthdayOfCustomer: " + birthdayOfCustomer +
                 "\nGender: " + gender +
-                "\nCcustomerId: " + customerId +
+                "\nCustomerId: " + customerId +
                 "\nCustomerPhone: " + customerPhone +
                 "\nCustomerEmail: " + customerEmail +
                 "\nCustomerType: " + customerType +

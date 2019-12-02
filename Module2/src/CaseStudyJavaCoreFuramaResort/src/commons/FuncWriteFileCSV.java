@@ -47,7 +47,8 @@ public class FuncWriteFileCSV {
                                                             "personLimit",
                                                             "rentType",
                                                             "freeServices"};
-    private static String[] headerRecordCustomer=new String[]{"customerName",
+    private static String[] headerRecordCustomer=new String[]{  "iD",
+                                                                "customerName",
                                                                 "birthdayOfCustomer",
                                                                 "gender",
                                                                 "customerId",
@@ -152,6 +153,7 @@ public class FuncWriteFileCSV {
             csvWriter.writeNext(headerRecordCustomer);
             for (Customer customer:arrayList){
                 csvWriter.writeNext(new String[]{
+                        customer.getID(),
                         customer.getCustomerName(),
                         customer.getBirthdayOfCustomer(),
                         customer.getGender(),

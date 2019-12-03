@@ -1,6 +1,6 @@
 package CaseStudyJavaCoreFuramaResort.src.commons;
 
-import CaseStudyJavaCoreFuramaResort.src.models.Customer;
+import models.Customer;
 
 import java.util.Comparator;
 

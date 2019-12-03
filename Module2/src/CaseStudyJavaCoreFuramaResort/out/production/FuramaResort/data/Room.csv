@@ -1,2 +1,4 @@
-name,id,area,rentCost,personLimit,rentType,freeServices
-Tran Van,c4abb2b02a6c4aef94fb42f0a0aacae9,11.0,13.0,0,Vip,madss
+iDService,nameService,area,rentCost,personLimit,rentType,freeServices
+ded560d3983d4600a61b589325796aa6,Room,34.0,34.0,4,Room2,Free
+ded560d3983d4600a61b589325796aa6,Room4,34.0,34.0,4,Room2,Free
+ded560d3983d4600a61b589325796aa6,Room2,34.0,34.0,4,Room2,Free

@@ -1,5 +1,6 @@
-package CaseStudyJavaCoreFuramaResort.src.commons;
-import CaseStudyJavaCoreFuramaResort.src.models.Customer;
+package commons;
+
+import models.Customer;
 
 import CaseStudyJavaCoreFuramaResort.src.models.Villa;
 import com.opencsv.CSVWriter;
@@ -14,14 +15,16 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.TreeSet;
+
 public class FuncWriteFileCSV {
     private static final char DEFAULT_SEPRATOR=',';
     private static final char DEFAULT_QUOTE='"';
-    private static final String pathVilla="src/CaseStudyJavaCoreFuramaResort/src/data/Villa.csv";
-    private static final String pathHouse="src/CaseStudyJavaCoreFuramaResort/src/data/House.csv";
-    private static final String pathRoom="src/CaseStudyJavaCoreFuramaResort/src/data/Room.csv";
-    private static final String pathCustomer="src/CaseStudyJavaCoreFuramaResort/src/data/Customer.csv";
-    private static final String pathBooking="src/CaseStudyJavaCoreFuramaResort/src/data/Booking.csv";
+    private static final String pathVilla="src/data/Villa.csv";
+    private static final String pathHouse="src/data/House.csv";
+    private static final String pathRoom="src/data/Room.csv";
+    private static final String pathCustomer="src/data/Customer.csv";
+    private static final String pathBooking="src/data/Booking.csv";
     private static String[] headerRecordVilla=new String[]{"iDService",
                                                             "nameService",
                                                             "area",
@@ -337,6 +340,7 @@ public class FuncWriteFileCSV {
         assert csvToBean != null;
         return (ArrayList<Customer>) csvToBean.parse();
     }
+
     // funcion get Villa from file Customer.csv
     public static ArrayList<Customer> getBookingFromCSV(){
         Path path = Paths.get(pathBooking);
@@ -365,4 +369,42 @@ public class FuncWriteFileCSV {
         assert csvToBean != null;
         return (ArrayList<Customer>) csvToBean.parse();
     }
+
+    // get name service
+    public static TreeSet<String> getAllNameServiceFromCSV(String path) {
+        BufferedReader br = null;
+        TreeSet<String> result = new TreeSet();
+        try {
+            String line;
+            br = new BufferedReader(new FileReader(path));
+
+            while ((line = br.readLine()) != null) {
+                if(getNameServicesFromFile(line).equals("nameService")){
+                    continue;
+                }
+                result.add(getNameServicesFromFile(line));
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null)
+                    br.close();
+            } catch (IOException crunchifyException) {
+                crunchifyException.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    public static String getNameServicesFromFile(String csvLine) {
+        String name = "";
+        if (csvLine != null) {
+            String[] splitData = csvLine.split(",");
+            name = splitData[1];
+        }
+        return name;
+    }
+
 }

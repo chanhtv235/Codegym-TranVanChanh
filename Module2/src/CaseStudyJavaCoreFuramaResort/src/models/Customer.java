@@ -1,4 +1,6 @@
-package CaseStudyJavaCoreFuramaResort.src.models;
+package models;
+
+import CaseStudyJavaCoreFuramaResort.src.models.Services;
 
 import java.util.Date;
 

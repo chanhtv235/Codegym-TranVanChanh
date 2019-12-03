@@ -1,2 +1,6 @@
-name,id,area,rentCost,personLimit,rentType,roomStandard,convenient,floorNumber,poolArea
-Chanh,d8ae2a0d5cfe416fbaf03700e95cedd5,1.0,1.0,2,Van,Tran,massage,5,3.0
+iDService,nameService,area,rentCost,personLimit,rentType,roomStandard,convenient,floorNumber,poolArea
+b587d581d44d400abd73ebcf681cd3ff,Tran,34.0,35.0,26,Van,Chanh,massage,38,39.0
+b587d581d44d400abd73ebcf681cd3ff,Chanh,34.0,35.0,26,Van,Chanh,massage,38,39.0
+b587d581d44d400abd73ebcf681cd3ff,Tran1,34.0,35.0,26,Van,Chanh,massage,38,39.0
+b587d581d44d400abd73ebcf681cd3ff,Van1,34.0,35.0,26,Van,Chanh,massage,38,39.0
+b587d581d44d400abd73ebcf681cd3ff,Van,34.0,35.0,26,Van,Chanh,massage,38,39.0

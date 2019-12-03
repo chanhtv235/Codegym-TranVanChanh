@@ -2,7 +2,7 @@ package CaseStudyJavaCoreFuramaResort.src.models;
 
 import java.util.Scanner;
 
-public class Villa extends VipServices {
+public class Villa extends CaseStudyJavaCoreFuramaResort.src.models.VipServices {
     private double poolArea;
 
     public double getPoolArea() {

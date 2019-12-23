@@ -8,9 +8,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1> Convert from ${dollar} to VND</h1>
+<form method="post">
+    <fieldset>
+        <table>
+            <tr>
+                <td><label>
+                    <input type="text" name="usd">
+                </label></td>
+                <td> USD </td>
+            </tr>
+        </table>
+        <input type="submit" value="Convert">
+    </fieldset>
+</form>
+<h1> Result: ${usd} USD = ${vnd} VND</h1>
 </body>
 </html>

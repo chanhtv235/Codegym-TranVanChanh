@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <td><input type="submit" value="Delete customer"></td>
-                <td><a href="${pageContext.request.contextPath}/huy">Back to customer list</a></td>
+                <td><a href="${pageContext.request.contextPath}/customer">Back to customer list</a></td>
             </tr>
         </table>
     </fieldset>

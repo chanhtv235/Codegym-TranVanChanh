@@ -13,7 +13,7 @@
 <body>
 <h1>Customer details</h1>
 <p>
-    <a href="${pageContext.request.contextPath}/huy">Back to customer list</a>
+    <a href="${pageContext.request.contextPath}/customer">Back to customer list</a>
 </p>
 <p>view</p>
 <table>

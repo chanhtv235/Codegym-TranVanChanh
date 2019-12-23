@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ebcc1ed-c634-47af-86cb-0e0de667ec98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/demo.Persion/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/main/java/com/codegym/demo_create_project_spring_boot/DemoCreateProjectSpringBootApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/main/java/com/codegym/demo_create_project_spring_boot/controllers/persionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/main/java/com/codegym/demo_create_project_spring_boot/entity/Persion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/main/java/com/codegym/demo_create_project_spring_boot/service/impl/PersionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/main/java/com/codegym/demo_create_project_spring_boot/service/impl/PersionServiceimpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.Persion/src/test/java/com/codegym/demo_create_project_spring_boot/DemoCreateProjectSpringBootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_SpringMVC/src/com/codegym/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_SpringMVC/src/com/codegym/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_SpringMVC/src/com/codegym/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_SpringMVC/src/com/codegym/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_SpringMVC/src/com/codegym/model/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_SpringMVC/src/com/codegym/model/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_SpringMVC/src/com/codegym/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_SpringMVC/src/com/codegym/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_SpringMVC/web/WEB-INF/views/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_SpringMVC/web/WEB-INF/views/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_SpringMVC/web/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_SpringMVC/web/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_SpringMVC/web/WEB-INF/views/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_SpringMVC/web/WEB-INF/views/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/main/java/com/codegym/product_thymeleaf/ProductThymeleafApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/main/java/com/codegym/product_thymeleaf/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/main/java/com/codegym/product_thymeleaf/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/main/java/com/codegym/product_thymeleaf/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/main/java/com/codegym/product_thymeleaf/service/impl/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/main/resources/templates/display.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/main/resources/templates/productForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_Thymeleaf/src/test/java/com/codegym/product_thymeleaf/ProductThymeleafApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/demo_create_project_spring_boot/controllers/persionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/demo_create_project_spring_boot/entity/Persion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/demo_create_project_spring_boot/service/impl/PersionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/demo_create_project_spring_boot/service/impl/PersionServiceimpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/.idea/javaWeb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/TuDien_Spring MVC/src/controllers/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/TuDien_Spring MVC/src/controllers/DictionaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/TuDien_Spring MVC/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/TuDien_Spring MVC/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chanh/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chanh/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chanh/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chanh/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chanh/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chanh/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chanh/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/out/artifacts/chuyen_doi_tien_te_spring_MVX_war_exploded/WEB-INF/classes/controllers/ConvertMoneyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/out/artifacts/chuyen_doi_tien_te_spring_MVX_war_exploded/WEB-INF/classes/controllers/ConvertMoneyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/out/artifacts/chuyen_doi_tien_te_spring_MVX_war_exploded/WEB-INF/views/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/out/artifacts/chuyen_doi_tien_te_spring_MVX_war_exploded/WEB-INF/views/display.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/out/artifacts/chuyen_doi_tien_te_spring_MVX_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/out/artifacts/chuyen_doi_tien_te_spring_MVX_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/out/production/chuyen_doi_tien_te_spring MVX/controllers/ConvertMoneyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/out/production/chuyen_doi_tien_te_spring MVX/controllers/ConvertMoneyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/src/controllers/ConvertMoneyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/src/controllers/ConvertMoneyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/web/WEB-INF/views/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/chuyen_doi_tien_te_spring MVX/web/WEB-INF/views/display.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/java/com/codegym/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/webapp/WEB-INF/views/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/customer-manager/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/WEB-INF/classes/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/WEB-INF/classes/controller/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/customers/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/artifacts/java_web_mvc_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/production/java-web-mvc/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/out/production/java-web-mvc/controller/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/src/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/src/Model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/src/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/src/controller/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/src/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/src/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/src/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/src/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/java-web-mvc/web/customers/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/spring-greeting/src/controllers/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/spring-greeting/src/controllers/GreetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/spring-greeting/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/spring-greeting/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_web/spring-greeting/web/WEB-INF/views/helloParamater.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_web/spring-greeting/web/WEB-INF/views/helloParamater.jsp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1VOIzrDxvXY17v2dTfzEAZ9WCaQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo.Persion" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ebcc1ed-c634-47af-86cb-0e0de667ec98" name="Default Changelist" comment="" />
+      <created>1577117980120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577117980120</updated>
+      <workItem from="1577117985913" duration="72000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

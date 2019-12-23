@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset th:border="1" >
+    <table>
+        <tr>
+            <th>Product Description:</th>
+            <th th:text="${product.nameProduct}"></th>
+        </tr>
+        <tr>
+            <th>Product price:$</th>
+            <th th:text="${product.price}"></th>
+        </tr>
+        <tr>
+            <th>Product discount:$</th>
+            <th th:text="${product.discount}"></th>
+        </tr>
+        <tr>
+            <th>Discount Amount %: </th>
+            <th th:text="${discountAmount}"></th>
+        </tr>
+        <tr>
+            <th>Discount Price:$ </th>
+            <th th:text="${discountPrice}"></th>
+        </tr>
+    </table>
+</fieldset>
+</body>
+</html>

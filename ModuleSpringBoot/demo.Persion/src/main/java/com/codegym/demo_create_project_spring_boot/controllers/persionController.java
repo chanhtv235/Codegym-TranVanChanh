@@ -36,4 +36,5 @@ public class persionController {
         redirect.addFlashAttribute("message","Tao moi thanh cong");
         return "redirect:/";
     }
+
 }

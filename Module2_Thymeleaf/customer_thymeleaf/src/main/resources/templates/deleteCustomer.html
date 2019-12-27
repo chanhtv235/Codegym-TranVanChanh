@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Info customer </h1>
+<fieldset>
+    <form th:object="${customer}" method="post">
+        <div>
+            <label>ID :</label>
+            <td th:text="${customer.id}"></td>
+        </div>
+
+        <div>
+            <label>Customer Name :</label>
+            <td th:text="${customer.name}"></td>
+        </div>
+        <div>
+            <label>Customer Email :</label>
+            <td th:text="${customer.email}"></td>
+        </div>
+        <div>
+            <label>Address :</label>
+            <td th:text="${customer.address}"></td>
+        </div>
+        <input type="submit" value="Delete">
+    </form>
+</fieldset>
+
+</body>
+</html>

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 public class ProductServiceImpl implements ProductService {
     @Override
     public float calculateDiscount(Product product) {
-        return (float) (product.getPrice()*product.getDiscount()*0.01);
+        return (float) (product.getPrice() * product.getDiscount() * 0.01);
     }
 }

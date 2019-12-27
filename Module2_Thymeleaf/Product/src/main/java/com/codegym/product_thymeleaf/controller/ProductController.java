@@ -12,16 +12,18 @@ import org.springframework.web.servlet.ModelAndView;
 public class ProductController {
     @Autowired
     ProductService productService;
-@GetMapping("/product")
-    public ModelAndView displayProductForm(){
-    return new ModelAndView("productForm","product",new Product());
-}
-@PostMapping("/calculate")
-    public ModelAndView calculateDiscount(Product product){
-    ModelAndView modelAndView = new ModelAndView("display");
-    modelAndView.addObject("product",product);
-    modelAndView.addObject("discountAmount",productService.calculateDiscount(product));
-    modelAndView.addObject("discountPrice",(product.getPrice()-productService.calculateDiscount(product)));
-    return modelAndView;
-}
+
+    @GetMapping("/product")
+    public ModelAndView displayProductForm() {
+        return new ModelAndView("productForm", "product", new Product());
+    }
+
+    @PostMapping("/calculate")
+    public ModelAndView calculateDiscount(Product product) {
+        ModelAndView modelAndView = new ModelAndView("display");
+        modelAndView.addObject("product", product);
+        modelAndView.addObject("discountAmount", productService.calculateDiscount(product));
+        modelAndView.addObject("discountPrice", (product.getPrice() - productService.calculateDiscount(product)));
+        return modelAndView;
+    }
 }

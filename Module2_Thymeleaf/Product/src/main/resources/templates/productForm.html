@@ -7,23 +7,23 @@
 <body>
 <h1>Product Discount Calculator</h1>
 <fieldset th:border="1">
-<form th:object="${product}" th:action="@{/calculate}" th:method="post">
-    <table>
-        <tr>
-            <th>Product Descreption</th>
-            <td><input type="text" th:field="*{nameProduct}"></td>
-        </tr>
-        <tr>
-            <th>List price</th>
-            <td><input type="text" th:field="*{price}"></td>
-        </tr>
-        <tr>
-            <th>Dicount</th>
-            <td><input type="text" th:field="*{discount}"></td>
-        </tr>
-    </table>
-    <input type="submit" value="calculate discount">
-</form>
+    <form th:object="${product}" th:action="@{/calculate}" th:method="post">
+        <table>
+            <tr>
+                <th>Product Descreption</th>
+                <td><input type="text" th:field="*{nameProduct}"></td>
+            </tr>
+            <tr>
+                <th>List price</th>
+                <td><input type="text" th:field="*{price}"></td>
+            </tr>
+            <tr>
+                <th>Dicount</th>
+                <td><input type="text" th:field="*{discount}"></td>
+            </tr>
+        </table>
+        <input type="submit" value="calculate discount">
+    </form>
 </fieldset>
 </body>
 

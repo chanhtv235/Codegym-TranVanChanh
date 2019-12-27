@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> List Product</h1>
+<div th:if="${message}">
+    <span th:text="${message}"></span>
+</div>
+<p><a th:href="@{/product/create}">Create a new production</a></p>
+    <table border="1">
+        <tr>
+            <td>Product ID</td>
+            <td>Product Name</td>
+            <td>Edit</td>
+            <td>Delete</td>
+            <td>Detail</td>
+        </tr>
+        <tr th:each="product :${productList}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.name}"></td>
+            <td><a th:href="@{'/product/edit/'+${product.id}}">Edit</a></td>
+            <td><a th:href="@{'/product/delete/'+${product.id}}">Delete</a></td>
+            <td><a th:href="@{'/product/info/'+${product.id}}">Info</a></td>
+        </tr>
+    </table>
+    <form th:action="@{/product/search}" method="get">
+        <input type="submit" value="Search Production">
+
+    </form>
+</body>
+</html>

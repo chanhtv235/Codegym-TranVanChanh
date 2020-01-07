@@ -101,7 +101,6 @@ public class CustomerController {
       return modelAndView;
     }
   }
-
   @PostMapping("/customer/delete")
   public String deleteCustomer(@ModelAttribute("customer") Customer customer){
     customerService.remove(customer.getId());
